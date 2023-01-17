@@ -9,7 +9,7 @@ if number < 0:
 
 last_digit = aux % 10
 if number < 0:
-    last_digit = -last digit
+    last_digit = -last_digit
 
 if last_digit == 0:
     print("is {:d} and is 0".format(last_digit))
