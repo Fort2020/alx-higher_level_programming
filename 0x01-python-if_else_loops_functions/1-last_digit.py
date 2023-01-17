@@ -14,6 +14,6 @@ if number < 0:
 if last_digit == 0:
     print("is {:d} and is 0".format(last_digit))
 elif last_digit > 5:
-    print("is {:d} and is > 5".format(last_digit))
+    print("is {:d} and is greater than 5".format(last_digit))
 else:
-    print("is {:d} and is < 6 and not 0".format(last_digit))
+    print("is {:d} and is less than 6 and not 0".format(last_digit))
