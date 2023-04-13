@@ -1,6 +1,5 @@
 #!/usr/bin/node
-// Searching 2 biggest integer in argument, 
-// If none, print 0: if arguments is 1, print 0
+// Searching 2 biggest integer in argument, if none, print 0: if 1, print 0
 if (process.argv.length <= 3) {
   console.log(0);
 } else {
