@@ -1,6 +1,5 @@
 #!/usr/bin/node
-// This script searches 2 biggest integer in the list of arguments.
-// If no argument passed, print 0: If the number of arguments is 1, print 0
+// Searching 2 biggest integer in argument, if none, print 0: if arguments is 1, print 0
 const myArgs = process.argv.slice(2);
 if (!myArgs[0] || !myArgs[2]) {
   console.log(0);
