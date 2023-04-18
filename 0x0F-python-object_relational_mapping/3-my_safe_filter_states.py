@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""This script takes in arguments and displays all values in the 
-states table of hbtn_0e_0_usa where name matches the argument. 
+"""This script takes in arguments and displays all values in the
+states table of hbtn_0e_0_usa where name matches the argument.
 But write one that is safe from MySQL injections!
 """
 import MySQLdb
@@ -8,9 +8,6 @@ import sys
 
 
 def list_it():
-    """
-    script thats is safe from MYSQL Injections
-    """
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
