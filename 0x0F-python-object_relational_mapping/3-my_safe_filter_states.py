@@ -6,6 +6,7 @@ But write one that is safe from MySQL injections!
 import MySQLdb
 import sys
 
+
 def list_it():
     """
     script thats is safe from MYSQL Injections
@@ -27,6 +28,7 @@ def list_it():
 
     for row in result:
         print(row)
+
 
 if __name__ == '__main__':
     list_it()

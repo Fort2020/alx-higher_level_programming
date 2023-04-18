@@ -5,6 +5,7 @@ all values in the states table of hbtn_0e_0_usa
 import MySQLdb
 import sys
 
+
 def list_it():
     username = sys.argv[1]
     password = sys.argv[2]
@@ -23,6 +24,7 @@ def list_it():
     for row in result:
         if row[1] == state_searched:
             print(row)
+
 
 if __name__ == '__main__':
     list_it()
