@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""This script prints the first State object
-from the database hbtn_0e_6_usa
-""" 
+"""This script prints the first State object from the database hbtn_0e_6_usa"""
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import Session
