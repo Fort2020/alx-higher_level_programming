@@ -1,33 +1,19 @@
 #!/usr/bin/python3
-"""
-This script lists all City objects
-from the database hbtn_0e_101_usa
-"""
+"""This script lists all City objects from the database hbtn_0e_101_usa"""
 import sys
-from relationship_city import City
-from relationship_state import State, Base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
-
-
-def fetch_all():
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        username, password, db_name), pool_pre_ping=True)
-
-    Base.metadata.create_all(engine)
-
-    session = Session(engine)
-
-    rows = session.query(State).order_by(State.id).all()
-    for state_row in rows:
-        print("{}: {}".format(state_row.id, state_row.name))
-        for city_row in state_row.cities:
-            print("    {}: {}".format(city_row.id, city_row.name))
-    session.close()
+from relationship_state import Base, State
+from relationship_city import City
 
 
 if __name__ == "__main__":
-    fetch_all(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    session = Session(engine)
+    for state in session.query(State).order_by(State.id).all():
+        for city in state.cities:
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
+    session.close()
