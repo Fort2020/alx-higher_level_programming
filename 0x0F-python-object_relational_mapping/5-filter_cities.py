@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script takes in the name of a state as an argument and 
+"""This script takes in the name of a state as an argument and
 lists all cities of that state, using the database hbtn_0e_4_usa
 """
 import MySQLdb
@@ -7,6 +7,9 @@ import sys
 
 
 def list_it():
+    """
+    script thats is safe from MYSQL Injections
+    """
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
