@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-script that lists all State objects, and corresponding City objects,
+This script lists all State objects, and corresponding City objects,
 contained in the database hbtn_0e_101_usa
 """
-
 import sys
 from relationship_city import City
 from relationship_state import State, Base
