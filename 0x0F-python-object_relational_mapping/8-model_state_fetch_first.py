@@ -13,6 +13,9 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    s = session.query(State).order_by(State.id).one()
+    if s:
+        print("{}: {}".format(s.id, s.name))
+    else:
+        print("Nothing")
     session.close()
