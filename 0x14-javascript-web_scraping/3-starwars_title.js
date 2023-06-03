@@ -1,7 +1,7 @@
 #!/usr/bin/node
-/* 
- A script that prints the title of a Star Wars movie
- where the episode number matches a given integer
+/*
+ A script that prints the title of a Star Wars movie,
+ where the episode number matches a given integer.
 */
 
 const request = require('request');
